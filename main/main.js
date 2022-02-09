@@ -31,7 +31,7 @@ const createWindow = () => {
     autoUpdater.checkForUpdatesAndNotify();
   });
   mainWindow.webContents.openDevTools({ mode: 'bottom' });
-  
+
   ipcMain.on('app_version', (event) => {
     event.sender.send('app_version', { version: app.getVersion() });
   });

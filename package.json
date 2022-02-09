@@ -133,8 +133,10 @@
     "lint:fix": "./node_modules/.bin/eslint src --fix",
     "start:src": "node scripts/start.js",
     "electron": "electron . --trace-warnings",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "build:src": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "build": "electron-builder build --mac --win --publish never",
+    "deploy": "electron-builder build --mac --win --publish always"
   },
   "eslintConfig": {
     "extends": [
